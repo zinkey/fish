@@ -81,7 +81,7 @@ router里面的传入参数表示地址栏#!后面的值，而返回值则是实
 		}
 	});
 
-	访问：http://localhost/etao/fish/demo/#!ppt/3
+	访问：http://localhost/fish/demo/#!ppt/3
 
 	sandbox.getDir():http://localhost/fish/demo/ppt/3/
 	sandbox.getHash:#!ppt/3
