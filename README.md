@@ -13,9 +13,9 @@ Fish只提供了三种方法：
 	
 	Fish.start()
 	
-2.Fish.stop 停止
+2.Fish.stop 停止侦听hash
 
-	停止后不会侦听hash
+	Fish.stop()
 
 3.Fish.ready 运行
 
