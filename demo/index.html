@@ -58,8 +58,9 @@
 </body>
 <script>
 Fish.start({
+	var version = "test";
 	router:function(url) {
-		return url+"/display.js?"+new Date*1;
+		return url+"/display.js?"+version;
 	}
 });
 
