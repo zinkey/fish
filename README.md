@@ -83,13 +83,13 @@ router里面的传入参数表示地址栏#!后面的值，而返回值则是实
 
 	访问：http://localhost/etao/fish/demo/#!ppt/3
 
-	sandbox.getDir():http://localhost/etao/fish/demo/ppt/3/
+	sandbox.getDir():http://localhost/fish/demo/ppt/3/
 	sandbox.getHash:#!ppt/3
-	sandbox.getHref:http://localhost/etao/fish/demo/#!ppt/3
+	sandbox.getHref:http://localhost/fish/demo/#!ppt/3
 	sandbox.getPath:ppt/3
 	sandbox.getRealpath:ppt/3/display.js?abc
-	sandbox.getUrl:http://localhost/etao/fish/demo/ppt/3/display.js?abc
-	sandbox.getFile:http://localhost/etao/fish/demo/ppt/3/display.js
+	sandbox.getUrl:http://localhost/fish/demo/ppt/3/display.js?abc
+	sandbox.getFile:http://localhost/fish/demo/ppt/3/display.js
 
 这里的getHash以及getHref都是页面访问时的值。如果我们做一个ajax异步操作，当结果返回时，我们可以通过判断sandbox.getHash()是否等于location.hash来决定是否渲染页面。
 
