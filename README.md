@@ -134,4 +134,10 @@ sandbox的这些是默认方法，如果觉得不够用，可以扩充，还是�
 		alert("ok");
 	});
 
+
 demo:http://uloveit.com.cn/fish/demo/
+
+
+##一点想法
+
+Fish只做hash驱动的事，在Fish.ready里面再去做其他事情，比如事件代理。每个Fish.ready可以认为就是一个view，这个view是需要拉取数据，模版渲染页面，做事件代理，传递数据到下个view，Fish都不应该关心。Fish只需要保证每个view可以获取调用view时的数据状态，这样才最大限制保证了灵活性。而约束则需要在Fish.ready里面做文章了。
