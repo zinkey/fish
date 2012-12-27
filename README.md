@@ -28,7 +28,7 @@ Fish只提供了三种方法：
 
 在html页面引入fish.js后，当hash值是#!这样的形式时，fish会去载入#!后面跟的js地址并执行。
 比如访问index.html#!a.js,则会去载入a.js。而a.js需书写为上面3中的形式。
-#!后面的我们称之为path,如上例中的a.js。这个path的路径是相对于html页面的，可自由书写。如index.html#!../b.js则会去加载index.html上一层级中的b.js。而index.html#!/c.js则会去加载根目录下的c.js。
+"#!"后面的我们称之为path,如上例中的a.js。这个path的路径是相对于html页面的，可自由书写。如index.html#!../b.js则会去加载index.html上一层级中的b.js。而index.html#!/c.js则会去加载根目录下的c.js。
 
 
 router路由
