@@ -8,8 +8,6 @@ Fish.ready(function(sandbox) {
 	var url = sandbox.getUrl();
 	var file = sandbox.getFile();
 
-	$("#ppt").css("background","url("+dir+"/bg.jpg)");
-	
 	$.ajax({
 	  url: dir+"template.html",
 	  context: document.body
@@ -29,6 +27,7 @@ Fish.ready(function(sandbox) {
 	});
 
 	function render(html){
+		$("#ppt").css("background","url("+dir+"/bg.jpg)");
 		$("#ppt").hide().html(html).show("slow");
 	}
 

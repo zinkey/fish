@@ -108,16 +108,16 @@ sandbox的这些是默认方法，如果觉得不够用，可以扩充，还是�
 
 ##打包
 
-如果需要将动态访问的js打包起来，这样就不需要动态去加载了，可以使用tool文件夹里面的compiler.js。把需要打包的js（使用Fish.ready的js文件）写在一个配置文件里面，如config.js：
+如果需要将动态访问的js打包起来，这样就不需要动态去加载了，可以使用tool文件夹里面的merge.js。把需要打包的js（使用Fish.ready的js文件）写在一个配置文件里面，如config.js：
 	
 	{
-		"merge.js":[
+		"12.js":[
 			"1.js",
 			"2.js"
 		]
 	}
 
-这样就会生成merger.js，在Fish.start前引入这个js，则当访问index.html#!1.js时就不需要动态去请求了。
+运行node merge.js config.js这样就会生成12.js，在Fish.start前引入这个js，则当访问index.html#!1.js时就不需要动态去请求了。
 
 
 ##说明
