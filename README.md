@@ -51,7 +51,7 @@ router里面的传入参数表示地址栏#!后面的值，而返回值则是实
 	})
 
 那么我们访问index.html#!a的时候会去加载a.js?1.0.0。
-之前提到，#!也可以是绝对路径。比如访问http://uloveit.com.cn/fish/index.html#!http://www.abc.com/1.js，那么是不是可以加载这个1.js呢？其实是不行的，因为这样跨域了，为了安全性默认是不能加载跨域脚步的。但我们可以通过设置crossdomain来允许(但建议采用下面的形式来避免访问跨域js带来的风险)：
+之前提到，#!也可以是绝对路径。比如访问"http://uloveit.com.cn/fish/index.html#!http://www.abc.com/1.js"，那么是不是可以加载这个1.js呢？其实是不行的，因为这样跨域了，为了安全性默认是不能加载跨域脚步的。但我们可以通过设置crossdomain来允许(但建议采用下面的形式来避免访问跨域js带来的风险)：
 
 	var map = {
 		"a":"http://www.abc.com/1.js",
