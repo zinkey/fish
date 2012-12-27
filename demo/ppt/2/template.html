@@ -1,0 +1,17 @@
+{$
+<div class="title">Fish</div>
+<div class="content">
+	<br>Fish.start(config),通过配置config：
+	<br>
+		{<br>
+			router:function(path){return path;}<br>
+			crossdomain:false,<br>
+			sandbox:{
+				myfunction:function(){
+					alert(this.getUrl);
+				}
+			}	
+		}<br>
+	设置router函数可改变路由规则，传入值是当前path，返回值是希望真实访问的值。crossdomain默认为false，设置为true后可跨加载js。sandbox可自由扩充方法，方法里的this指向当前sandbox对象
+</div>
+$}

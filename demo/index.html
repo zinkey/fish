@@ -1,0 +1,111 @@
+<!doctype html>
+<html action="html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<script type="text/javascript" src="../fish.js"></script>
+
+	<!--
+	<script src="ppt-merge.js"></script>
+	-->
+
+	<script src="lib/jquery.js"></script>
+	<script src="lib/template.js"></script>
+	<script src="lib/event.js"></script>
+	<style>
+		body{
+			background:#ddd;
+		}
+		#ppt{
+			width:800px;
+			height:500px;
+			position:absolute;
+			margin:-250px 0 0 -400px;
+			left:50%;
+			top:50%;
+			border:3px solid #f7f1f2;
+			-moz-border-radius: 15px;      
+   			-webkit-border-radius: 15px;   
+    		border-radius:15px;           
+    		overflow:hidden;
+		}
+		#ppt .title{
+			height:70px;
+			background:#000;
+			opacity:0.7;
+			font-size:60px;
+			color:#fff;
+			text-align:center;
+			line-height: 70px;
+			font-weight: bold;
+			-moz-border-radius: 15px;     
+   			-webkit-border-radius: 15px;   
+    		border-radius:15px;
+		}
+		#ppt .content{
+			height: 430px;
+			background: #fff;
+			opacity:0.5;
+			filter:alpha(opacity=50);
+			color:#000;
+			font-size:30px;
+			padding:20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="ppt"></div>
+</body>
+<script>
+Fish.start({
+	router:function(url) {
+		return url+"/display.js?"+new Date*1;
+	}
+});
+
+
+var total = 5;
+
+
+function next(){
+	location.hash = location.hash.replace(/\d+/,function(a,b){
+		var num = parseInt(a);
+		if (num==total){
+			return 1;
+		}
+		return num+1;
+	});
+}
+
+function prev(){
+	location.hash = location.hash.replace(/\d+/,function(a,b){
+		var num = parseInt(a);
+		if (num==1){
+			return total;
+		}
+		return num-1;
+	});
+}
+
+YayaEvent.bind({
+	"html":{
+		"click":function(){
+			next();
+		},
+		"keyup":function(e){
+			e = e || event;
+			var keycode = e.keyCode;
+			if (keycode == 37){
+				prev();
+			}
+			if (keycode == 39){
+				next();
+			}
+		}
+	}
+});
+
+if (location.hash == ""){
+	location.hash = "#!ppt/1";
+}
+</script>
+</html>

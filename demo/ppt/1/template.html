@@ -1,0 +1,16 @@
+{$
+<div class="title">Fish</div>
+<div class="content">
+	Fish是hash驱动的页面管理类
+	<br>只提供三个方法:
+	Fish.start(config) Fish.stop() Fish.ready(sandbox)
+	<br>
+	最简单的用法：
+	<ol>
+		<li>在html页面（如1.html）引入fish.js,运行Fish.start()</li>
+		<li>在一个js文件（如1.js）里面写上Fish.ready(function(sandbox){alert("ok!");});</li>
+		<li>访问带有hash的url，xxx/1.html#!1.js（#!后的路径是相对于1.html页面的）
+	</ol>
+
+</div>
+$}
