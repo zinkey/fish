@@ -7,7 +7,7 @@
 	if (win.Fish) {
 		return;
 	}
-	var lasthash,
+	var	lasthash,
 		timer,
 		ie67listen,
 		iframedocument,
