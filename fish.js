@@ -12,6 +12,7 @@
 		ie67listen,
 		iframedocument,
 		fn,
+		tag,
 		isrun,
 		config,
 		mapfn = {},
@@ -215,12 +216,13 @@
 			}
 		},
 		loadjs = function(obj){
+			tag = new Date-Math.random();
 			var script = doc.createElement("script");
 			script.onload = script.onreadystatechange = function () {
 				if (!script.readyState || script.readyState == "loaded"|| script.readyState == "complete") {
 					var sandbox = new Sandbox(obj);
 					mapfn[obj.file] = fn;
-					if (script.getAttribute("path") == obj.path && fn){
+					if (script.getAttribute("tag") == tag && fn){
 						fn(sandbox);
 					}
 					ref.parentNode.removeChild(script);
@@ -228,7 +230,7 @@
 			};
 			script.setAttribute('type','text/javascript');
 			script.setAttribute("src",obj.url);
-			script.setAttribute('path',obj.path);
+			script.setAttribute('tag',tag);
 			ref.parentNode.insertBefore(script, ref);
 		};
 	win.Fish = Fish;	
