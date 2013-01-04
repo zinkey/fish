@@ -35,15 +35,7 @@
 				}
 				config = conf || {};
 				if (config.sandbox) {
-					for (var i in config.sandbox) {
-						if (obj.hasOwnProperty(i)) {
-							Sandbox.prototype[i] = (function(i) {
-								return function() {
-									return config.sandbox[i].apply(this, arguments);
-								}
-							})(i);
-						}
-					}
+					Sandbox.prototype = config.sandbox;
 				}
 				if (ie67) {
 					if (!ie67listen) {
