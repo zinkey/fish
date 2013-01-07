@@ -20,7 +20,7 @@
 		interval = 50,
 		ie = /msie (\d+\.\d+)/i.test(navigator.userAgent) ? (doc.documentMode || +RegExp["$1"]) : false,
 		ie67 = (ie && ie < 8) || (!("onhashchange" in win)),
-		fishcallbackname = "__FishCallback__" + ( + new Date).toString(36),
+		fishcallbackname = "__FishCallback__",
 		ref = doc.getElementsByTagName('script')[0],
 		Fish = {
 			ready: function(callback, realpath) {
